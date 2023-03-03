@@ -10,15 +10,15 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #bcddf7;
+  background: #ecf0f3;
 }
 .wrapper,
 .wrapper .img-area,
 .social-icons a,
 .buttons button{
-  background: #eeeeee;
-  box-shadow: -3px -3px 7px #ebebeb,
-               3px 3px 5px #ebebeb;
+  background: #ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff,
+               3px 3px 5px #ceced1;
 }
 .wrapper{
   position: relative;
@@ -176,7 +176,7 @@ body{
   content: "";
   height: 100%;
   width: 2px;
-  background: #dcdddf;
+  background: #e0e6eb;
   margin-left: -25px;
 }
 .row:first-child::before{
