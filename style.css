@@ -16,7 +16,7 @@ body{
 .wrapper .img-area,
 .social-icons a,
 .buttons button{
-  background: #b6babd;
+  background: #eeeeee;
   box-shadow: -3px -3px 7px #ebebeb,
                3px 3px 5px #ebebeb;
 }
@@ -176,7 +176,7 @@ body{
   content: "";
   height: 100%;
   width: 2px;
-  background: #e0e6eb;
+  background: #dcdddf;
   margin-left: -25px;
 }
 .row:first-child::before{
