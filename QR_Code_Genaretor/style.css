@@ -30,6 +30,11 @@ header h1{
   font-size: 21px;
   font-weight: 500;
 }
+.new h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
 header p{
   margin-top: 5px;
   color: #575757;
