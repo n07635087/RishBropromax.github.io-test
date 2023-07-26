@@ -20,6 +20,7 @@ p {
       Download = "Dance Track">
        <center><button id="downloadButton">Download Song</button></center>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ERK6ZNM3LX"></script>
      
 <script>
   
@@ -29,6 +30,11 @@ p {
   audio.play();
 });
 
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ERK6ZNM3LX');
 
 // Replace this with your download functionality
 document.getElementById("downloadButton").addEventListener("click", function() {
