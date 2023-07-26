@@ -22,30 +22,18 @@
   audio.play();
 });
 
-  const button = document.querySelector("#downloadButton");
-const icon = document.querySelector("#downloadButton > i");
-const audio = document.querySelector("audio");
-
-button.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.volume = 2.o;
-    audio.play();
-    icon.classList.remove('fa-volume-up');
-    icon.classList.add('fa-volume-mute');
-    
-  } else {
-    audio.pause();
-    icon.classList.remove('fa-volume-mute');
-    icon.classList.add('fa-volume-up');
-  }
-  button.classList.add("fade");
-});
+alert("Song is downloading...");
+alert("Song is downloaded !");
+alert("Good Luck For your dance Event");
+alert("Subscribe Rish Bro Youtube Channel");
 
 // Replace this with your download functionality
 document.getElementById("downloadButton").addEventListener("click", function() {
   // Your download logic here
   console.log("Download button clicked!");
 });
+
+
 
 
 </script>
