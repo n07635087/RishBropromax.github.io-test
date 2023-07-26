@@ -1,0 +1,19 @@
+/* Customize the button styles as per your design */
+button#downloadButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button#downloadButton:hover {
+  background-color: #45a049;
+}
+
+button#downloadButton:active {
+  background-color: #3e8e41;
+}
