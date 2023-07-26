@@ -1,0 +1,43 @@
+<head>
+   <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 8 Song</title>
+</head>
+<body>
+  <audio src="file/song.mp3"></audio>
+
+  <a href = "file/song.mp3"
+      Download = "Dance Track">
+         <button type = "button"> Download Song </button>
+    
+<script>
+  
+  window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
+});
+
+  const button = document.querySelector("#button");
+const icon = document.querySelector("#button > i");
+const audio = document.querySelector("audio");
+
+button.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.volume = 2.o;
+    audio.play();
+    icon.classList.remove('fa-volume-up');
+    icon.classList.add('fa-volume-mute');
+    
+  } else {
+    audio.pause();
+    icon.classList.remove('fa-volume-mute');
+    icon.classList.add('fa-volume-up');
+  }
+  button.classList.add("fade");
+});
+
+</script>
+
+</body>
