@@ -10,7 +10,7 @@
 
   <a href = "/MRCM/file/song.mp3"
       Download = "Dance Track">
-         <button type = "button"> Download Song </button>
+         <button id="downloadButton">Download Song</button>
     
 <script>
   
@@ -20,8 +20,8 @@
   audio.play();
 });
 
-  const button = document.querySelector("#button");
-const icon = document.querySelector("#button > i");
+  const button = document.querySelector("#downloadButton");
+const icon = document.querySelector("#downloadButton > i");
 const audio = document.querySelector("audio");
 
 button.addEventListener("click", () => {
