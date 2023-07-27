@@ -18,8 +18,8 @@ def login():
             session["logged_in"] = True
             return redirect(url_for("gallery"))
         else:
-            return render_template("login.html", message="Invalid password")
-    return render_template("login.html")
+            return render_template("index.html", message="Invalid password")
+    return render_template("index.html")
 
 @app.route("/gallery")
 def gallery():
