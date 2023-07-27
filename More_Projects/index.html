@@ -1,3 +1,17 @@
-<center>
-  <h1> Comming Soon හිටපන් ටිකක් මේක හදනවා යකෝ 
-         
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Gallery</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="/" method="post">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Login">
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
