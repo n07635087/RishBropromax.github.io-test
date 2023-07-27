@@ -6,8 +6,8 @@
 <body>
     <h1>Gallery</h1>
     {% for image in images %}
-    <a href="{{ https://telegra.ph/file/41f1fbfcb24b3d47ce1b5.jpg('view_image', image_name=Saheli) }}">
-        <img src="{{ url_for('static', filename='images/' + image) }}" width="150" height="150">
+    <a href="{{ ('view_image', image_name=Saheli.jpg) }}">
+        <img src="{{ url_for('static', filename='More_projects/static/images/' + Saheli.jpg) }}" width="150" height="150">
     </a>
     {% endfor %}
     <br>
