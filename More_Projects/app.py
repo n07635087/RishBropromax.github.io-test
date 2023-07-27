@@ -26,17 +26,17 @@ def gallery():
     if not session.get("logged_in"):
         return redirect(url_for("login"))
 
-    image_list = os.listdir("static/images")
+    image_list = os.listdir("More_Projects/static/images")
     return render_template("gallery.html", images=image_list)
 
 @app.route("/image/<string:image_name>")
-def view_image(image_name):
+def view_image(Saheli.jpg):
     if not session.get("logged_in"):
         return redirect(url_for("login"))
 
-    image_path = os.path.join("static/images", image_name)
+    image_path = os.path.join("More_Projects/static/images", Saheli.jpg)
     try:
-        img = Image.open(image_path)
+        img = Image.open(More_projects/static/images/)
         img.show()
     except Exception as e:
         return f"Error displaying image: {e}"
