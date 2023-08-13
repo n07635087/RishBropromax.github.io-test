@@ -1,4 +1,2 @@
-This Piano made By Rishmika Sandanu Copyright © RishBroProMax Github
-Script made by Cording Nepal 
-
-officaial Web 
+Copyright By RishBroProMax
+This Sounds And Piano Make by RishBropromax,Script make By Coding Nepal
