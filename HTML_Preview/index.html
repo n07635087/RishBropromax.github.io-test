@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RishBroProMax HTML </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="shortcut icon" type="image/x-icon" href="https://telegra.ph/file/43fbc11f5de2335a6a580.png" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  
+  <!-- GetResponse Analytics -->
+  <script type="text/javascript">
+      
+  (function(m, o, n, t, e, r, _){
+          m['__GetResponseAnalyticsObject'] = e;m[e] = m[e] || function() {(m[e].q = m[e].q || []).push(arguments)};
+          r = o.createElement(n);_ = o.getElementsByTagName(n)[0];r.async = 1;r.src = t;r.setAttribute('crossorigin', 'use-credentials');_.parentNode .insertBefore(r, _);
+      })(window, document, 'script', 'https://ga.getresponse.com/script/137d23d4-c739-4592-82ac-b69638472de2/ga.js', 'GrTracking');
+
+
+  </script>
+  <!-- End GetResponse Analytics -->
+	<style>
+    body {
+		font: 12px 'Helvetica Neue', Helvetica, Arial, freesans, clean, sans-serif;
+		color: rgb(0, 0, 0);
+	}
+	h1 {
+		font-size: 28px;
+	}
+	a {
+		color: rgb(44, 43, 43);
+	}
+	#previewform {
+		display: none;
+		padding: 20px; 
+		text-align: center;
+	}
+	strong {
+		color: #333;
+		background-color: #ffba25;
+		padding: 0.1em;
+	}
+	#footer {
+		margin: 20px 0;
+		font-size: 15px;
+		color: rgb(0, 0, 0);
+	}
+
+      *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  background: #75bfeb;
+  overflow: hidden;
+}
+.container{
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.container .box{
+  background: rgb(125, 214, 255)
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 15px 25px 15px 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: show_box 0.8s ease forwards;
+}
+@keyframes show_box {
+  0%{
+    transform: translateX(100%);
+  }
+  40%{
+    transform: translateX(-5%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+#hide:checked ~ .box{
+  animation: hide_box 0.8s ease forwards;
+}
+@keyframes hide_box {
+  0%{
+    transform: translateX(0%);
+  }
+  40%{
+    transform: translateX(5%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(calc(100% + 35px ));
+  }
+}
+.container .box i{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: rgb(0, 4, 255);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container i:hover{
+  color: #000;
+}
+.container .logo{
+  height: 90px;
+  width: 90px;
+  margin-right: 15px;
+}
+.container .logo img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.box .right{
+  display: flex;
+  flex-direction: column;
+}
+.box .right .text-1{
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.box .right .text-2{
+  font-size: 14px;
+  color: #666;
+  margin: 2px 0 8px 0;
+}
+.box .right a{
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  padding: 8px 0;
+  background: #0211df;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.box .right a:hover{
+  background-color: #3b0be6;
+}
+.container #hide{
+  display: none;
+} 
+
+	</style>
+
+<style>
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #E3F2FD;
+}
+.popup {
+  position: absolute;
+  left: 50%;
+  top: -25%;
+  visibility: hidden;
+  width: 490px;
+  border-radius: 5px;
+  padding: 13px 17px 20px;
+  background: #fff;
+  display: flex;
+  border-top: 3px solid #EA4D67;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 25px rgba(52,87,220,0.1);
+  transition: all 0.25s ease;
+}
+.popup.show {
+  top: 0;
+  visibility: visible;
+}
+.popup.online {
+  border-color: #2ECC71;
+}
+.popup .icon i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #EA4D67;
+}
+.popup.online .icon i {
+  background: #2ECC71;
+}
+.popup .title {
+  font-size: 1.2rem;
+}
+.popup .desc {
+  color: #474747;
+  margin: 3px 0 10px;
+  font-size: 1.04rem;
+}
+.popup .reconnect {
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 13px;
+  border-radius: 4px;
+  background: #5372F0;
+}
+.popup.online .reconnect {
+  background: #bfbfbf;
+  pointer-events: none;
+}
+@media screen and (max-width: 550px) {
+  .popup {
+    width: 100%;
+    padding: 10px 15px 17px;
+  }
+}
+
+    </style>
+
+</head>
+<body>
+    
+<script>
+ 
+const popup = document.querySelector(".popup"),
+wifiIcon = document.querySelector(".icon i"),
+popupTitle = document.querySelector(".popup .title"),
+popupDesc = document.querySelector(".desc"),
+reconnectBtn = document.querySelector(".reconnect");
+let isOnline = true, intervalId, timer = 10;
+const checkConnection = async () => {
+    try {
+        // Try to fetch random data from the API. If the status code is between 
+        // 200 and 300, the network connection is considered online 
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        isOnline = response.status >= 200 && response.status < 300;
+    } catch (error) {
+        isOnline = false; // If there is an error, the connection is considered offline
+    }
+    timer = 10;
+    clearInterval(intervalId);
+    handlePopup(isOnline);
+}
+const handlePopup = (status) => {
+    if(status) { // If the status is true (online), update icon, title, and description accordingly
+        wifiIcon.className = "uil uil-wifi";
+        popupTitle.innerText = "Restored Connection";
+        popupDesc.innerHTML = "Your device is now successfully connected to the internet.";
+        popup.classList.add("online");
+        return setTimeout(() => popup.classList.remove("show"), 2000);
+    }
+    // If the status is false (offline), update the icon, title, and description accordingly
+    wifiIcon.className = "uil uil-wifi-slash";
+    popupTitle.innerText = "Lost Connection";
+    popupDesc.innerHTML = "Your network is unavailable. We will attempt to reconnect you in <b>10</b> seconds.";
+    popup.className = "popup show";
+    intervalId = setInterval(() => { // Set an interval to decrease the timer by 1 every second
+        timer--;
+        if(timer === 0) checkConnection(); // If the timer reaches 0, check the connection again
+        popup.querySelector(".desc b").innerText = timer;
+    }, 1000);
+}
+// Only if isOnline is true, check the connection status every 3 seconds
+setInterval(() => isOnline && checkConnection(), 3000);
+reconnectBtn.addEventListener("click", checkConnection);
+
+    </script>
+
+    <p style="background-image: url('https://telegra.ph/file/75ecfa3a97ce06adfa0a5.jpg');">
+	<form id="previewform" onsubmit="location.href='/?'+this.file.value;return false">
+		<h1>ImRishmima HTML Preview</h1><br>
+		<p>
+			Enter URL of the HTML file to preview:
+			<input type="url" id="file" value="" placeholder="e.g. https://github.com/user/repo/blob/master/index.html" size="60" autofocus>
+			<input type="submit" value="View Index">
+		</p> <br>
+        <p>or prepend to the URL: <code><strong>http://imrishmika.42web.io/</strong>https://github.com/twbs/bootstrap/blob/gh-pages/2.3.2/index.html</code></p>
+		 <br><br>
+		<p id="footer">Developed by <a href="https://github.com/RishbroProMax">Rishmika Sandanu</a> | Contribute on <a href="https://github.com/RishBropromax/ImRishmikaHTMLpreview/">GitHub</a></p>
+        <p id="footer"><a href="main.html">Report The Website Erorr</a>
+        <p id="footer"><a href="https://www.youtube.com/watch?v=XHRBX4b8S9A&">How To Use</a>
+        
+<center><h1>Example Video</h1> <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/XHRBX4b8S9A?start=6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center> <br><br>
+<center>
+  <p><ul>
+       <a href="https://github.com/RishBroPromax" class="github"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/imrishmika" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/imrishmika" class="insta"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@Rish_Bro" class="yt"><i class="fab fa-youtube"></i></a>
+ </ul></p>
+</center>
+
+</form>
+     <div class="container">
+    <input type="radio" id="hide">
+    <div class="box">
+      <label for="hide"><i class="fas fa-times"></i></label>
+      <div class="logo">
+        <img src="https://telegra.ph/file/c58476991dcffd831468b.jpg" alt="Rish bro">
+      </div>
+      <div class="right">
+        <div class="text-1">Rish Bro</div>
+        <div class="text-2">Subscribe My YouTube Channel</div>
+        <a href="https://www.youtube.com/channel/@Rish_Bro" target="_blank">Subscribe Now</a>
+      </div>
+    </div>
+  </div>
+
+	<script>
+      
+     (function () {
+	
+	var previewForm = document.getElementById('previewform');
+
+	var url = location.search.substring(1).replace(/&i=1/gi, null).replace(/i=1/gi, null).replace(/\/\/github\.com/, '//raw.githubusercontent.com').replace(/\/blob\//, '/'); //Get URL of the raw file
+
+	var replaceAssets = function () {
+		var frame, a, link, links = [], script, scripts = [], i, href, src;
+		//Framesets
+		if (document.querySelectorAll('frameset').length)
+			return; //Don't replace CSS/JS if it's a frameset, because it will be erased by document.write()
+		//Frames
+		frame = document.querySelectorAll('iframe[src],frame[src]');
+		for (i = 0; i < frame.length; ++i) {
+			src = frame[i].src; //Get absolute URL
+			if (src.indexOf('//raw.githubusercontent.com') > 0 || src.indexOf('//bitbucket.org') > 0) { //Check if it's from raw.github.com or bitbucket.org
+				frame[i].src = '//' + location.hostname + location.pathname + '?' + src; //Then rewrite URL so it can be loaded using CORS proxy
+			}
+		}
+		//Links
+		a = document.querySelectorAll('a[href]');
+		for (i = 0; i < a.length; ++i) {
+			href = a[i].href; //Get absolute URL
+			if (href.indexOf('#') > 0) { //Check if it's an anchor
+				a[i].href = '//' + location.hostname + location.pathname + location.search + '#' + a[i].hash.substring(1); //Then rewrite URL with support for empty anchor
+			} else if ((href.indexOf('//raw.githubusercontent.com') > 0 || href.indexOf('//bitbucket.org') > 0) && (href.indexOf('.html') > 0 || href.indexOf('.htm') > 0)) { //Check if it's from raw.github.com or bitbucket.org and to HTML files
+				a[i].href = '//' + location.hostname + location.pathname + '?' + href; //Then rewrite URL so it can be loaded using CORS proxy
+			}
+		}
+		//Stylesheets
+		link = document.querySelectorAll('link[rel=stylesheet]');
+		for (i = 0; i < link.length; ++i) {
+			href = link[i].href; //Get absolute URL
+			if (href.indexOf('//raw.githubusercontent.com') > 0 || href.indexOf('//bitbucket.org') > 0) { //Check if it's from raw.github.com or bitbucket.org
+				links.push(fetchProxy(href, null, 0)); //Then add it to links queue and fetch using CORS proxy
+			}
+		}
+		Promise.all(links).then(function (res) {
+			for (i = 0; i < res.length; ++i) {
+				loadCSS(res[i]);
+			}
+		});
+		//Scripts
+		script = document.querySelectorAll('script[type="text/htmlpreview"]');
+		for (i = 0; i < script.length; ++i) {
+			src = script[i].src; //Get absolute URL
+			if (src.indexOf('//raw.githubusercontent.com') > 0 || src.indexOf('//bitbucket.org') > 0) { //Check if it's from raw.github.com or bitbucket.org
+				scripts.push(fetchProxy(src, null, 0)); //Then add it to scripts queue and fetch using CORS proxy
+			} else {
+				script[i].removeAttribute('type');
+				scripts.push(script[i].innerHTML); //Add inline script to queue to eval in order
+			}
+		}
+		Promise.all(scripts).then(function (res) {
+			for (i = 0; i < res.length; ++i) {
+				loadJS(res[i]);
+			}
+			document.dispatchEvent(new Event('DOMContentLoaded', {bubbles: true, cancelable: true})); //Dispatch DOMContentLoaded event after loading all scripts
+		});
+	};
+
+	var loadHTML = function (data) {
+		if (data) {
+			data = data.replace(/<head([^>]*)>/i, '<head$1><base href="' + url + '">').replace(/<script(\s*src=["'][^"']*["'])?(\s*type=["'](text|application)\/javascript["'])?/gi, '<script type="text/htmlpreview"$1'); //Add <base> just after <head> and replace <script type="text/javascript"> with <script type="text/htmlpreview">
+			setTimeout(function () {
+				document.open();
+				document.write(data);
+				document.close();
+				replaceAssets();
+			}, 10); //Delay updating document to have it cleared before
+		}
+	};
+
+	var loadCSS = function (data) {
+		if (data) {
+			var style = document.createElement('style');
+			style.innerHTML = data;
+			document.head.appendChild(style);
+		}
+	};
+
+	var loadJS = function (data) {
+		if (data) {
+			var script = document.createElement('script');
+			script.innerHTML = data;
+			document.body.appendChild(script);
+		}
+	};
+	
+	var fetchProxy = function (url, options, i) {
+		var proxy = [
+			'', // try without proxy first
+			'https://api.codetabs.com/v1/proxy/?quest='
+		];
+		return fetch(proxy[i] + url, options).then(function (res) {
+			if (!res.ok) throw new Error('Cannot load ' + url + ': ' + res.status + ' ' + res.statusText);
+			return res.text();
+		}).catch(function (error) {
+			if (i === proxy.length - 1)
+				throw error;
+			return fetchProxy(url, options, i + 1);
+		})
+	};
+
+	if (url && url.indexOf(location.hostname) < 0)
+		fetchProxy(url, null, 0).then(loadHTML).catch(function (error) {
+			console.error(error);
+			previewForm.style.display = 'block';
+			previewForm.innerText = error;
+		});
+	else
+		previewForm.style.display = 'block';
+
+})()
+
+
+    </script>
+</body>
+</html>
